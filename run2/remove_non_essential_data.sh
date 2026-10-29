@@ -1,0 +1,1 @@
+../input_hyogo/remove_non_essential_data.sh

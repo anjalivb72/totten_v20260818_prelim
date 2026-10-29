@@ -1,0 +1,18 @@
+#!/bin/sh
+#------ pjsub option --------#
+##PJM -L rscgrp=debug-o
+##PJM -L rscgrp=short-o
+#PJM -L rscgrp=regular-o
+#PJM -L node=5
+#PJM --mpi proc=240
+#PJM --omp thread=1
+#PJM -L elapse=02:10:00
+#PJM -g gi55o
+#PJM -j
+#------- Program execution -------#
+module load fj fjmpi
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.utf8
+export FLIB_IO_UNBUFFERED=TRUE
+cd /work/01/gr18/n32002/model/totten/hyogo/nakayama2021_run067_obcsbalance
+mpiexec -n ${PJM_MPI_PROC} ./mitgcmuv -Wl,-T

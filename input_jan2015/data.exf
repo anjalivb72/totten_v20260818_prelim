@@ -1,0 +1,132 @@
+# *********************
+# External Forcing Data
+# *********************
+#
+ &EXF_NML_01
+#
+ useAtmWind        = .TRUE.,
+#NCEP VALUES:
+# exf_albedo        = 0.15,
+  exf_scal_BulkCdn   = 0.25,
+# cstanton_1         = 0.049118,
+# cstanton_2         = 0.02506,
+# cdalton            = 0.052025,
+
+#MITgcm default values
+# cstanton_1     =        0.0327D0
+# cstanton_2     =        0.0180D0
+# cdalton        =        0.0346D0
+
+#MITgcm	default	values*1.2
+ cstanton_1     =0.03924,
+ cstanton_2     =0.02160,
+ cdalton        =0.04152,
+
+#TO COMBINE WITH ALLOW_ZENITH_ANGLE:
+ exf_albedo        = 0.1,
+ useExfZenIncoming = .TRUE., 
+ select_ZenAlbedo  = 1,
+#
+ ocean_emissivity = 0.97,
+ ice_emissivity = 0.95,
+ snow_emissivity = 0.95,
+#
+ exf_iprec         = 32,
+ exf_yftype        = 'RL',
+ useExfYearlyFields= .TRUE.,
+ useExfCheckRange  = .FALSE.,
+ /
+#
+ &EXF_NML_02
+ atempfile         = 'ERA5_tmp2m_degC_totten_hyogo',
+ aqhfile           = 'ERA5_spfh2m_totten_hyogo',
+ precipfile        = 'ERA5_rain_totten_hyogo',
+ uwindfile         = 'ERA5_u10m_totten_hyogo',
+ vwindfile         = 'ERA5_v10m_totten_hyogo',
+ swdownfile        = 'ERA5_dsw_totten_hyogo',
+ lwdownfile        = 'ERA5_dlw_totten_hyogo',
+# runoffFile        = 'runoff_Core_cnyf2p0_DJ_bg6_ms_V1_totten_hyogo.bin',
+#
+ atempstartdate1   = 19920101,
+ atempstartdate2   = 000000,
+ atempperiod       = 3600.0,
+#
+ aqhstartdate1     = 19920101,
+ aqhstartdate2     = 000000,
+ aqhperiod         = 3600.0,
+#
+ precipstartdate1  = 19920101,
+ precipstartdate2  = 003000,
+ precipperiod      = 3600.0,
+#
+# runoffperiod      = -12,
+#
+ uwindstartdate1   = 19920101,
+ uwindstartdate2   = 000000,
+ uwindperiod       = 3600.0,
+#
+ vwindstartdate1   = 19920101,
+ vwindstartdate2   = 000000,
+ vwindperiod       = 3600.0,
+#
+ swdownstartdate1  = 19920101,
+ swdownstartdate2  = 003000,
+ swdownperiod      = 3600.0,
+ lwdownstartdate1  = 19920101,
+ lwdownstartdate2  = 003000,
+ lwdownperiod      = 3600.0,
+ &
+#
+ &EXF_NML_03
+ exf_offset_atemp   = 273.15,
+ exf_inscal_swdown  = -1.0,
+ exf_inscal_lwdown  = -1.0,
+ &
+#
+ &EXF_NML_04
+# runoff_interpMethod = 0,
+ atemp_interpMethod = 0,
+ aqh_interpMethod = 0,
+ precip_interpMethod = 0,
+ uwind_interpMethod = 0,
+ vwind_interpMethod = 0,
+ swdown_interpMethod = 0,
+ lwdown_interpMethod = 0,
+ &
+#
+ &EXF_NML_OBCS
+ obcsNstartdate1   = 19911217,
+ obcsNstartdate2   = 004500,
+ obcsNperiod       = 2629800.0,
+#
+ obcsSstartdate1   = 19911217,
+ obcsSstartdate2   = 004500,
+ obcsSperiod       = 2629800.0,
+#
+ obcsEstartdate1   = 19911217,
+ obcsEstartdate2   = 004500,
+ obcsEperiod       = 2629800.0,
+#
+ obcsWstartdate1   = 19911217,
+ obcsWstartdate2   = 004500,
+ obcsWperiod       = 2629800.0,
+#
+ siobNstartdate1   = 19911217,
+ siobNstartdate2   = 004500,
+ siobNperiod       = 2629800.0,
+#
+ siobSstartdate1   = 19911217,
+ siobSstartdate2   = 004500,
+ siobSperiod       = 2629800.0,
+#
+ siobEstartdate1   = 19911217,
+ siobEstartdate2   = 004500,
+ siobEperiod       = 2629800.0,
+#
+ siobWstartdate1   = 19911217,
+ siobWstartdate2   = 004500,
+ siobWperiod       = 2629800.0,
+#
+ /
+
+

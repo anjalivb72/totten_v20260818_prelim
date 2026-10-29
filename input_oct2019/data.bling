@@ -1,0 +1,18 @@
+# BLING parameters 
+ &ABIOTIC_PARMS
+ &
+
+ &BIOTIC_PARMS
+ &
+
+ &BLING_FORCING
+  BLING_silicaFile='si_surf_clim_woa18_bgose6_totten_hyogo.bin',
+  BLING_ironFile = 'fet_surfflux_mahowald_bgose6_totten_hyogo.bin',
+  BLING_pCO2=380.5E-6,
+#
+ apco2file         = 'CT_apco2_bgose6_totten_hyogo',
+#  apco2startdate1     = 20050101,
+#  apco2startdate2     = 000000,
+  apco2period         = 2635200,
+  apco2_interpMethod = 0,
+ &

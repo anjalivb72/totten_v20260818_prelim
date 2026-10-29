@@ -1,0 +1,117 @@
+# ***************
+# Open boundaries
+# ***************
+ &OBCS_PARM01
+ OB_Jnorth =   720*-1,
+ OB_Jsouth =   720*1,
+ OB_Ieast  =   280*-1,
+ OB_Iwest  =   280*1,
+#
+ useOBCSprescribe =.TRUE.,
+ useOBCSbalance=.TRUE.,
+#useOBCSsponge    =.TRUE.,
+ OBCSsponge_UatNS =.FALSE.
+ OBCSsponge_VatEW =.FALSE.
+#
+ OBNsFile='FOBNs_ms_com.bin',
+ OBNtFile='FOBNt_ms_com.bin',
+ OBNuFile='FOBNu_ms_com.bin',
+ OBNvFile='FOBNv_ms_com.bin',
+#
+ OBSsFile='FOBNs_ms_com.bin',
+ OBStFile='FOBNt_ms_com.bin',
+ OBSuFile='FOBNu_ms_com.bin',
+ OBSvFile='FOBNv_ms_com.bin',
+#
+ OBEsFile='FOBEs_ms_com.bin',
+ OBEtFile='FOBEt_ms_com.bin',
+ OBEuFile='FOBEu_ms_com.bin',
+ OBEvFile='FOBEv_ms_com.bin',
+#
+ OBWsFile='FOBWs_ms_com.bin',
+ OBWtFile='FOBWt_ms_com.bin',
+ OBWuFile='FOBWu_ms_com.bin',
+ OBWvFile='FOBWv_ms_com.bin',
+#
+ OBNaFile   = 'OBNa_ms_com.bin',
+ OBNhFile   = 'OBNh_ms_com.bin',
+ OBNslFile  = 'OBNsl_ms.bin',
+ OBNsnFile  = 'OBNsn_ms_com.bin',
+ OBNuiceFile= 'OBNuice_ms_com.bin',
+ OBNviceFile= 'OBNvice_ms_com.bin',
+#
+ OBSaFile   = 'OBNa_ms_com.bin',
+ OBShFile   = 'OBNh_ms_com.bin',
+ OBSslFile  = 'OBNsl_ms.bin',
+ OBSsnFile  = 'OBNsn_ms_com.bin',
+ OBSuiceFile= 'OBNuice_ms_com.bin',
+ OBSviceFile= 'OBNvice_ms_com.bin',
+#
+ OBEaFile   = 'OBEa_ms_com.bin',
+ OBEhFile   = 'OBEh_ms_com.bin',
+ OBEslFile  = 'OBEsl_ms.bin',
+ OBEsnFile  = 'OBEsn_ms_com.bin',
+ OBEuiceFile= 'OBEuice_ms_com.bin',
+ OBEviceFile= 'OBEvice_ms_com.bin',
+#
+ OBWaFile   = 'OBWa_ms_com.bin',
+ OBWhFile   = 'OBWh_ms_com.bin',
+ OBWslFile  = 'OBWsl_ms.bin',
+ OBWsnFile  = 'OBWsn_ms_com.bin',
+ OBWuiceFile= 'OBWuice_ms_com.bin',
+ OBWviceFile= 'OBWvice_ms_com.bin',
+#
+ useOBCStides = .FALSE.,
+#components   = M2       S2     N2       K2       K1      O1       P1       Q1       Mf         Mm
+#periods (hr) = 12.4206  12     12.6583  11.9672  23.9345 25.8193  24.0659  26.8684  327.8599   661.31
+# tidalPeriod  = 44714.16,43200.,45569.88,43081.92,86164.2,92949.48,86637.24,96726.24,1180295.64,2380716.,
+# OBSamFile='OBSam.seaice_obcs',
+# OBNamFile='OBNam.seaice_obcs.v',
+# OBNamtFile='OBNam.seaice_obcs.u',
+# OBEamFile='OBEam.seaice_obcs',
+# OBWamFile='OBWam.seaice_obcs',
+# OBSphFile='OBSph.seaice_obcs',
+# OBNphFile='OBNph.seaice_obcs.v',
+# OBNphtFile='OBNph.seaice_obcs.u',
+# OBEphFile='OBEph.seaice_obcs',
+# OBWphFile='OBWph.seaice_obcs',
+ OBNptrFile(1)='DIC_bgoseI042_totten_hyogo_obcn.bin',
+ OBNptrFile(2)='Alk_bgoseI042_totten_hyogo_obcn.bin',
+ OBNptrFile(3)='O2_bgoseI042_totten_hyogo_obcn.bin',
+ OBNptrFile(4)='NO3_bgoseI042_totten_hyogo_obcn.bin',
+ OBNptrFile(5)='PO4_bgoseI042_totten_hyogo_obcn.bin',
+ OBNptrFile(6)='Fe_bgoseI042_totten_hyogo_obcn.bin',
+ OBNptrFile(7)='DON_bgoseI042_totten_hyogo_obcn.bin',
+ OBNptrFile(8)='DOP_bgoseI042_totten_hyogo_obcn.bin',
+ OBNptrFile(9)='biomass_bgoseI042_totten_hyogo_obcn.bin',
+#
+ OBWptrFile(1)='DIC_bgoseI042_totten_hyogo_obcw.bin',
+ OBWptrFile(2)='Alk_bgoseI042_totten_hyogo_obcw.bin',
+ OBWptrFile(3)='O2_bgoseI042_totten_hyogo_obcw.bin',
+ OBWptrFile(4)='NO3_bgoseI042_totten_hyogo_obcw.bin',
+ OBWptrFile(5)='PO4_bgoseI042_totten_hyogo_obcw.bin',
+ OBWptrFile(6)='Fe_bgoseI042_totten_hyogo_obcw.bin',
+ OBWptrFile(7)='DON_bgoseI042_totten_hyogo_obcw.bin',
+ OBWptrFile(8)='DOP_bgoseI042_totten_hyogo_obcw.bin',
+ OBWptrFile(9)='biomass_bgoseI042_totten_hyogo_obcw.bin',
+#
+ OBEptrFile(1)='DIC_bgoseI042_totten_hyogo_obce.bin',
+ OBEptrFile(2)='Alk_bgoseI042_totten_hyogo_obce.bin',
+ OBEptrFile(3)='O2_bgoseI042_totten_hyogo_obce.bin',
+ OBEptrFile(4)='NO3_bgoseI042_totten_hyogo_obce.bin',
+ OBEptrFile(5)='PO4_bgoseI042_totten_hyogo_obce.bin',
+ OBEptrFile(6)='Fe_bgoseI042_totten_hyogo_obce.bin',
+ OBEptrFile(7)='DON_bgoseI042_totten_hyogo_obce.bin',
+ OBEptrFile(8)='DOP_bgoseI042_totten_hyogo_obce.bin',
+ OBEptrFile(9)='biomass_bgoseI042_totten_hyogo_obce.bin',
+ &
+# *****************************************
+# Sponge Layer Parameters.
+# *****************************************
+ &OBCS_PARM03
+ Urelaxobcsinner=1296000.E0,
+ Urelaxobcsbound=43200.E0,
+ Vrelaxobcsinner=1296000.E0,
+ Vrelaxobcsbound=43200.E0,
+ spongeThickness=3,
+ /

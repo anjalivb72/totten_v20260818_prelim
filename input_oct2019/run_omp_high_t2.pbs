@@ -1,0 +1,18 @@
+#!/bin/sh
+#------ pjsub option --------#
+#PJM -L rscgrp=debug-o
+##PJM -L rscgrp=short-o
+##PJM -L rscgrp=regular-o
+#PJM -L node=5
+#PJM --mpi proc=240
+#PJM --omp thread=1
+#PJM -L elapse=00:30:00
+#PJM -g GROUP NAME
+#PJM -j
+#------- Program execution -------#
+module load fj fjmpi
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.utf8
+export FLIB_IO_UNBUFFERED=TRUE
+cd PATH
+mpiexec -n ${PJM_MPI_PROC} ./mitgcmuv -Wl,-T

@@ -1,0 +1,1 @@
+../../MITgcm/pkg/shelfice/shelfice_write_pickup.F

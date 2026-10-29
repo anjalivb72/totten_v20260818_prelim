@@ -1,0 +1,14 @@
+# Ignore MITgcm binary outputs and diagnostic metadata
+*.data
+*.meta
+*.bin
+
+# Ignore ERA5
+*[Ee][Rr][Aa]5*
+
+# Ignore standard output logs
+STDOUT.*
+STDERR.*
+*.log
+main.log
+*output.txt
